@@ -1,0 +1,31 @@
+{
+  "name": "Chatbo-Nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wvdomingos/chatbot-nodejs.git"
+  },
+  "keywords": [
+    "botbuilder",
+    "chatbots",
+    "bot-framework",
+    "nodejs"
+  ],
+  "author": "Wander Vilhalva Domingos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wvdomingos/chatbot-nodejs/issues"
+  },
+  "homepage": "https://github.com/wvdomingos/chatbot-nodejs#readme",
+  "dependencies": {
+    "botbuilder": "^3.14.0",
+    "dotenv-extended": "^2.3.0",
+    "moment": "^2.24.0",
+    "restify": "^6.3.4"
+  }
+}
