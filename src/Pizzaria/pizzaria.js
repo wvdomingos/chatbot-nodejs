@@ -45,7 +45,7 @@ intents.matches('Pedir', [
             "Mussarela",
             "Especial da Casa",
             "Baiana",
-            "Bacno"
+            "Bacno",
         ];
 
         let entityPizza = builder.EntityRecognizer.findEntity(args.entities, 'Pizza');
@@ -55,7 +55,7 @@ intents.matches('Pedir', [
         }
 
         if (!match){
-            builder.Prompts.choice(session, 'No momento só temos essas pizzas disponíveis! \n Qual que você gostaria de pedir? \n ')
+            builder.Prompts.choice(session, 'No momento só temos essas pizzas disponíveis! \n Qual que você gostaria de pedir? \n ', pizzas);
         } else {
             next({ reponse: match });
         }
@@ -65,7 +65,7 @@ intents.matches('Pedir', [
             var time = moment().add(30, 'm');
 
             session.dialogData.time = time.format('HH:mm');
-            session.send("Perfeito! Sua pizza de **%s** chegará às **%s**", results.response, session.dialogData.time );
+            session.send("Perfeito! Sua pizza de **%s** chegará às **%s**", results.response.entity, session.dialogData.time );
         }else {
             session.send('Sem problemas! Se não gostarem, podem pedir numa próxima vez!');
         }
